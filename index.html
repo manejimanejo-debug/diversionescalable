@@ -191,6 +191,45 @@ h1{font-size:44px}
 </style>
 </head>
 <body>
+<style>
+.hero{
+background:
+radial-gradient(circle at center,rgba(245,158,11,.15),transparent 40%);
+}
+.card,.review,.stat,.faq-item{
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+transition:.3s;
+}
+.card:hover,.review:hover,.stat:hover{
+transform:translateY(-8px);
+border-color:rgba(245,158,11,.35);
+}
+.cta:hover{
+transform:translateY(-3px) scale(1.03);
+}
+.compare{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+margin-top:50px;
+}
+.compare-box{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+padding:40px;
+border-radius:24px;
+}
+.compare-box h3{
+margin-bottom:20px;
+font-size:30px;
+}
+.bad{border-color:rgba(239,68,68,.2)}
+.good{border-color:rgba(34,197,94,.2)}
+.compare ul{padding-left:20px;line-height:2}
+@media(max-width:768px){
+.compare{grid-template-columns:1fr}
+}
+</style>
 
 <section class="hero">
 <div>
@@ -235,6 +274,51 @@ Nuestro objetivo es generar ventas reales utilizando tu propia base de datos. No
 </div>
 </section>
 
+
+<section class="section">
+<div class="container">
+<h2 class="title">Más eficiente que gastar miles en publicidad</h2>
+<p class="sub">
+La mayoría de los negocios invierte constantemente en anuncios para conseguir clientes nuevos.
+C1RCO trabaja con personas que YA llegaron a tu negocio anteriormente.
+</p>
+
+<div class="compare">
+
+<div class="compare-box bad">
+<h3>💸 Publicidad Tradicional</h3>
+<ul>
+<li>Costos constantes en pauta.</li>
+<li>Competís contra cientos de anunciantes.</li>
+<li>Pagás por clics que no compran.</li>
+<li>Resultados impredecibles.</li>
+<li>Necesitás seguir invirtiendo.</li>
+</ul>
+</div>
+
+<div class="compare-box good">
+<h3>🚀 Sistema C1RCO</h3>
+<ul>
+<li>Reactivás contactos existentes.</li>
+<li>Sin necesidad de grandes presupuestos.</li>
+<li>Personas que ya mostraron interés.</li>
+<li>Mayor tasa de respuesta.</li>
+<li>Pagás cuando obtenés resultados.</li>
+</ul>
+</div>
+
+</div>
+
+<div class="pay" style="margin-top:40px">
+<h2>Ahorrá miles en pauta publicitaria</h2>
+<p>
+En lugar de perseguir clientes nuevos todos los días, recuperamos contactos que ya habían llegado a vos de forma orgánica o mediante campañas anteriores. Es una de las formas más rentables de generar nuevas ventas porque aprovechás activos que ya tenés.
+</p>
+</div>
+
+</div>
+</section>
+
 <section class="section">
 <div class="container">
 <h2 class="title">Resultados</h2>
@@ -250,62 +334,24 @@ Nuestro objetivo es generar ventas reales utilizando tu propia base de datos. No
 
 <section class="section">
 <div class="container">
-
 <h2 class="title">Reseñas verificadas</h2>
-<p class="sub">Experiencias reales de dueños de paneles que volvieron a monetizar su base de datos.</p>
+<p class="sub">Experiencias de negocios que volvieron a monetizar su base de datos.</p>
 
 <div class="reviews">
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-Recuperamos clientes que no respondían hacía más de 6 meses. El retorno fue mucho más rápido de lo esperado.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>Recuperamos clientes que no respondían hacía más de 6 meses. El retorno fue mucho más rápido de lo esperado.</p><div class="author">Cliente Verificado ✓</div></div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-Lo implementamos en pocos días y empezamos a recibir consultas nuevamente de clientes antiguos.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>Lo implementamos en pocos días y empezamos a recibir consultas nuevamente de clientes antiguos.</p><div class="author">Cliente Verificado ✓</div></div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-La automatización nos permitió generar oportunidades sin contratar más personal.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>La automatización nos permitió generar oportunidades sin contratar más personal.</p><div class="author">Cliente Verificado ✓</div></div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-Teníamos más de 12.000 contactos olvidados. Hoy representan una parte importante de nuestras ventas.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>Teníamos más de 12.000 contactos olvidados. Hoy representan una parte importante de nuestras ventas.</p><div class="author">Cliente Verificado ✓</div></div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-Lo que más valoramos fue el seguimiento constante. Los clientes vuelven a interactuar todos los días.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>Lo que más valoramos fue el seguimiento constante. Los clientes vuelven a interactuar.</p><div class="author">Cliente Verificado ✓</div></div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>
-Probamos otras alternativas antes, pero ninguna generó resultados tan consistentes.
-</p>
-<div class="author">DUEÑO DE PANEL</div>
-</div>
+<div class="review"><div class="stars">★★★★★</div><p>Probamos otras alternativas antes, pero ninguna generó resultados tan consistentes.</p><div class="author">Cliente Verificado ✓</div></div>
 
 </div>
-
 </div>
 </section>
 
