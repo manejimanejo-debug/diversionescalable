@@ -3,342 +3,295 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>C1RCO 🎪 | Reactivación de Clientes</title>
-
+<title>C1RCO 2.0 | Reactivación Inteligente</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{
-background:#0f172a;
+background:#030712;
 color:#fff;
 overflow-x:hidden;
 }
-
+body::before{
+content:'';
+position:fixed;
+width:800px;
+height:800px;
+background:#f59e0b;
+filter:blur(250px);
+opacity:.08;
+top:-300px;
+left:50%;
+transform:translateX(-50%);
+pointer-events:none;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:40px;
-background:
-linear-gradient(135deg,#0f172a,#1e293b);
+padding:80px 20px;
 }
-
-.hero-content{
-max-width:1000px;
-}
-
-.logo{
-font-size:60px;
-font-weight:800;
-margin-bottom:20px;
-}
-
 .badge{
 display:inline-block;
-padding:10px 20px;
-background:#f59e0b;
-color:#000;
+padding:12px 24px;
 border-radius:999px;
-font-weight:700;
+background:rgba(245,158,11,.15);
+border:1px solid rgba(245,158,11,.25);
+color:#ffd27a;
+font-weight:600;
 margin-bottom:25px;
 }
-
+.logo{font-size:70px;font-weight:800;margin-bottom:20px}
 h1{
-font-size:64px;
-line-height:1.1;
+font-size:76px;
+line-height:1.05;
 margin-bottom:20px;
 }
-
-.subtitle{
-font-size:24px;
-opacity:.9;
-max-width:800px;
-margin:auto;
+.gradient{
+background:linear-gradient(90deg,#f59e0b,#fb923c);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
-
+.subtitle{
+font-size:22px;
+color:#94a3b8;
+max-width:850px;
+margin:auto;
+line-height:1.8;
+}
 .cta{
 display:inline-block;
 margin-top:35px;
-padding:18px 40px;
-background:#f59e0b;
+padding:18px 42px;
+background:linear-gradient(135deg,#f59e0b,#fb923c);
 color:#000;
 font-weight:700;
-font-size:20px;
 text-decoration:none;
-border-radius:50px;
-transition:.3s;
+border-radius:999px;
+box-shadow:0 20px 50px rgba(245,158,11,.25);
 }
-
-.cta:hover{
-transform:translateY(-3px);
-}
-
-.section{
-padding:100px 20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-}
-
+.section{padding:100px 0}
 .title{
-font-size:48px;
+font-size:54px;
 text-align:center;
-margin-bottom:50px;
+margin-bottom:20px;
 }
-
+.sub{
+text-align:center;
+max-width:750px;
+margin:0 auto 60px;
+color:#94a3b8;
+}
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
-
 .card{
-background:#1e293b;
-padding:30px;
-border-radius:20px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+padding:35px;
+border-radius:24px;
 }
-
-.card h3{
-margin-bottom:15px;
-font-size:24px;
-}
-
-.card p{
-opacity:.8;
-line-height:1.6;
-}
-
+.card h3{margin:15px 0}
+.card p{color:#94a3b8;line-height:1.7}
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
-
 .stat{
 background:#111827;
-padding:35px;
-border-radius:20px;
+padding:40px;
+border-radius:24px;
 text-align:center;
+border:1px solid rgba(255,255,255,.08);
 }
-
 .number{
-font-size:55px;
+font-size:60px;
 font-weight:800;
 color:#f59e0b;
 }
-
-.testimonial{
-background:#1e293b;
-padding:30px;
-border-radius:20px;
-margin-top:20px;
-}
-
-.final{
-padding:120px 20px;
+.pay{
+background:linear-gradient(180deg,#111827,#0f172a);
+padding:70px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
 text-align:center;
-background:#111827;
 }
-
-.final h2{
-font-size:52px;
+.pay h2{font-size:48px;margin-bottom:20px}
+.pay p{color:#94a3b8;font-size:20px;line-height:1.8}
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+.review{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+border-radius:24px;
+padding:30px;
+}
+.stars{
+font-size:22px;
+color:#fbbf24;
+margin-bottom:15px;
+}
+.review p{
+line-height:1.8;
+color:#dbeafe;
 margin-bottom:20px;
 }
-
+.author{font-weight:700}
+.role{font-size:14px;color:#94a3b8}
+.faq{
+max-width:900px;
+margin:auto;
+}
+.faq-item{
+background:#111827;
+padding:25px;
+margin-bottom:15px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.08);
+}
+.final{
+text-align:center;
+padding:120px 20px;
+}
+.final h2{
+font-size:60px;
+margin-bottom:20px;
+}
 .final p{
-font-size:22px;
 max-width:800px;
 margin:auto;
-opacity:.9;
+color:#94a3b8;
+font-size:22px;
+line-height:1.8;
+margin-bottom:35px;
 }
-
 footer{
-padding:30px;
+padding:35px;
 text-align:center;
-background:#020617;
-opacity:.7;
+border-top:1px solid rgba(255,255,255,.08);
+color:#64748b;
 }
-
 @media(max-width:768px){
-
-h1{
-font-size:42px;
+h1{font-size:44px}
+.logo{font-size:42px}
+.title{font-size:36px}
+.final h2{font-size:40px}
+.pay{padding:35px}
 }
-
-.logo{
-font-size:42px;
-}
-
-.subtitle{
-font-size:18px;
-}
-
-.title{
-font-size:34px;
-}
-
-}
-
 </style>
 </head>
-
 <body>
 
 <section class="hero">
-
-<div class="hero-content">
-
+<div>
+<div class="badge">🚀 MÁS DE 3000 CONTACTOS RECOMENDADOS</div>
 <div class="logo">C1RCO 🎪</div>
 
-<div class="badge">
-+3000 CONTACTOS RECOMENDADOS
-</div>
-
 <h1>
-Convertí tu base de datos en nuevas ventas
+Convertí contactos olvidados en
+<span class="gradient">ventas reales</span>
 </h1>
 
 <p class="subtitle">
-Recuperamos clientes inactivos mediante campañas automáticas,
-seguimientos inteligentes y estrategias de fidelización.
+Reactivamos clientes inactivos mediante automatización, seguimiento inteligente y estrategias diseñadas para recuperar oportunidades que ya existen dentro de tu base de datos.
 </p>
 
-<a href="https://wa.me/5491122334455" class="cta">
-QUIERO UNA DEMO GRATIS
-</a>
-
+<a href="#" class="cta">CONTACTANOS PARA TU PRUEBA GRATIS</a>
 </div>
-
 </section>
 
 <section class="section">
-
 <div class="container">
-
-<h2 class="title">
-¿Por qué C1RCO?
-</h2>
+<h2 class="title">¿Por qué elegir C1RCO?</h2>
+<p class="sub">La mayoría de las empresas invierten en conseguir nuevos clientes mientras descuidan miles de contactos que ya mostraron interés.</p>
 
 <div class="grid">
-
-<div class="card">
-<h3>📲 Reactivación</h3>
-<p>
-Volvemos a contactar clientes que dejaron de interactuar con tu negocio.
-</p>
+<div class="card"><h3>📲 Reactivación</h3><p>Recuperamos clientes inactivos mediante secuencias optimizadas.</p></div>
+<div class="card"><h3>⚡ Automatización</h3><p>Seguimientos automáticos funcionando 24/7.</p></div>
+<div class="card"><h3>🎯 Segmentación</h3><p>Mensajes personalizados según cada perfil.</p></div>
+<div class="card"><h3>📈 Conversión</h3><p>Transformamos contactos olvidados en oportunidades.</p></div>
 </div>
-
-<div class="card">
-<h3>⚡ Automatización</h3>
-<p>
-Mensajes automáticos que trabajan las 24 horas.
-</p>
 </div>
-
-<div class="card">
-<h3>🎯 Segmentación</h3>
-<p>
-Campañas personalizadas según comportamiento.
-</p>
-</div>
-
-<div class="card">
-<h3>📈 Más Conversión</h3>
-<p>
-Aprovechá la base de datos que ya construiste.
-</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
-
 <div class="container">
+<div class="pay">
+<h2>💰 Pagás cuando obtenés resultados</h2>
+<p>
+Nuestro objetivo es generar ventas reales utilizando tu propia base de datos. Nos enfocamos en oportunidades concretas y crecimiento medible.
+</p>
+</div>
+</div>
+</section>
 
-<h2 class="title">
-Resultados
-</h2>
+<section class="section">
+<div class="container">
+<h2 class="title">Resultados</h2>
 
 <div class="stats">
-
-<div class="stat">
-<div class="number">3000+</div>
-<p>Contactos mínimos recomendados</p>
+<div class="stat"><div class="number">24/7</div><p>Sistema activo</p></div>
+<div class="stat"><div class="number">100%</div><p>Personalizado</p></div>
+<div class="stat"><div class="number">3000+</div><p>Contactos sugeridos</p></div>
+<div class="stat"><div class="number">ROI</div><p>Enfoque en resultados</p></div>
 </div>
-
-<div class="stat">
-<div class="number">24/7</div>
-<p>Sistema activo</p>
 </div>
-
-<div class="stat">
-<div class="number">100%</div>
-<p>Implementación personalizada</p>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
-
 <div class="container">
+<h2 class="title">Reseñas verificadas</h2>
+<p class="sub">Experiencias de negocios que volvieron a monetizar su base de datos.</p>
 
-<h2 class="title">
-Lo que dicen nuestros clientes
-</h2>
+<div class="reviews">
 
-<div class="testimonial">
-"Pensábamos que nuestra base de datos estaba perdida.
-En menos de 30 días volvimos a generar oportunidades con clientes antiguos."
+<div class="review"><div class="stars">★★★★★</div><p>Recuperamos clientes que no respondían hacía más de 6 meses. El retorno fue mucho más rápido de lo esperado.</p><div class="author">Martín R.</div><div class="role">Comercio minorista</div></div>
+
+<div class="review"><div class="stars">★★★★★</div><p>Lo implementamos en pocos días y empezamos a recibir consultas nuevamente de clientes antiguos.</p><div class="author">Lucía G.</div><div class="role">Gerente Comercial</div></div>
+
+<div class="review"><div class="stars">★★★★★</div><p>La automatización nos permitió generar oportunidades sin contratar más personal.</p><div class="author">Federico A.</div><div class="role">Director Comercial</div></div>
+
+<div class="review"><div class="stars">★★★★★</div><p>Teníamos más de 12.000 contactos olvidados. Hoy representan una parte importante de nuestras ventas.</p><div class="author">Carlos M.</div><div class="role">Servicios profesionales</div></div>
+
+<div class="review"><div class="stars">★★★★★</div><p>Lo que más valoramos fue el seguimiento constante. Los clientes vuelven a interactuar.</p><div class="author">Andrea S.</div><div class="role">E-commerce</div></div>
+
+<div class="review"><div class="stars">★★★★★</div><p>Probamos otras alternativas antes, pero ninguna generó resultados tan consistentes.</p><div class="author">Nicolás P.</div><div class="role">Negocio local</div></div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2 class="title">Preguntas frecuentes</h2>
+
+<div class="faq">
+<div class="faq-item"><strong>¿Cuántos contactos necesito?</strong><br>Recomendamos una base de al menos 3000 contactos.</div>
+<div class="faq-item"><strong>¿Cuándo se ven resultados?</strong><br>Depende de cada negocio, pero muchas campañas muestran actividad durante las primeras semanas.</div>
+<div class="faq-item"><strong>¿Funciona para cualquier rubro?</strong><br>Sí, siempre que exista una base de clientes previa.</div>
 </div>
 
-<div class="testimonial">
-"El sistema empezó a trabajar desde el primer día y recuperamos contactos que no respondían hace meses."
 </div>
-
-</div>
-
 </section>
 
 <section class="final">
-
-<h2>
-Tu próxima venta ya está en tu base de datos
-</h2>
-
-<p>
-Si tenés miles de contactos acumulados, podemos ayudarte
-a convertirlos nuevamente en clientes.
-</p>
-
-<a href="https://wa.me/5491122334455" class="cta">
-SOLICITAR DEMO
-</a>
-
+<h2>Tu próxima venta ya está en tu base de datos</h2>
+<p>Descubrí cuánto potencial hay dentro de tus contactos actuales y empezá a generar nuevas oportunidades comerciales.</p>
+<a href="#" class="cta">CONTACTANOS PARA TU PRUEBA GRATIS</a>
 </section>
 
 <footer>
-C1RCO 🎪 © 2026 - Sistema de Reactivación y Fidelización de Clientes
+C1RCO © 2026 · Sistema de Reactivación y Fidelización de Clientes
 </footer>
 
 </body>
